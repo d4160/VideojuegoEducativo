@@ -11,6 +11,11 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 _direction;
     public float _rotationY;
 
+    public float ZDirection()
+    {
+        return _direction.z;
+    }
+
     public bool IsWalking()
     {
         return _direction.z != 0;

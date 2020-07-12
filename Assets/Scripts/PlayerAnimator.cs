@@ -17,11 +17,7 @@ public class PlayerAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerMov.IsWalking())
-            _anim.SetFloat("Speed", 1f);
-        else
-        {
-            _anim.SetFloat("Speed", 0f);
-        }
+        _anim.SetFloat("Speed", playerMov.ZDirection(), 
+            0.1f, Time.deltaTime);
     }
 }
