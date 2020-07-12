@@ -11,11 +11,11 @@ public class PlayerInput : MonoBehaviour
     {
         float rotationValue = Input.GetAxis("Horizontal");
 
-        playerMov._rotationY = 135 * rotationValue;
+        playerMov._rotationY = rotationValue;
 
 
         float forwardValue = Input.GetAxis("Vertical");
 
-        playerMov._direction = new Vector3(0, 0, 3 * forwardValue);
+        playerMov._direction = new Vector3(0, 0, forwardValue);
     }
 }
